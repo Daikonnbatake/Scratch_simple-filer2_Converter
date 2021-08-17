@@ -43,5 +43,5 @@ listup_path('%s/fs2_root'%cwd)
 pathmap = {dirs[i]:i for i in range(len(dirs))}
 export('%s/fs2_root'%cwd, cwd)
 output = ['']*len(dirs)
-for i in range(len(output)): output[i] = '%s/%s/%s/%s/'%(meta[i], name[i], parent[i], value[i])
+for i in range(len(output)): output[i] = '"%s/%s/%s/%s/"'%(meta[i], name[i], parent[i], value[i])
 with open('%s/output.txt'%cwd,'w',encoding='utf-8') as f:f.write('\n'.join(output))
